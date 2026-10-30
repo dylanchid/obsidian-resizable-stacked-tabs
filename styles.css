@@ -1,0 +1,39 @@
+/* Kept narrow so it does not alter ordinary tab groups or split panes. */
+.workspace-tabs.mod-stacked > .workspace-leaf.resizable-stacked-tabs-pane,
+.workspace-tabs.mod-stacked .workspace-leaf.resizable-stacked-tabs-pane {
+  position: relative;
+}
+
+.resizable-stacked-tabs-handle {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: -5px;
+  width: 10px;
+  height: 100%;
+  cursor: ew-resize;
+  touch-action: none;
+}
+
+.resizable-stacked-tabs-handle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 4px;
+  width: 2px;
+  background: var(--interactive-accent);
+  opacity: 0;
+  transition: opacity 100ms ease;
+}
+
+.resizable-stacked-tabs-pane:hover > .resizable-stacked-tabs-handle::after,
+.resizable-stacked-tabs-is-dragging .resizable-stacked-tabs-handle::after {
+  opacity: 0.75;
+}
+
+.resizable-stacked-tabs-is-dragging,
+.resizable-stacked-tabs-is-dragging * {
+  cursor: ew-resize !important;
+  user-select: none !important;
+}

@@ -1,0 +1,9 @@
+{
+  "id": "resizable-stacked-tabs",
+  "name": "Resizable Stacked Tabs",
+  "version": "1.0.0",
+  "minAppVersion": "1.6.0",
+  "description": "Drag a stacked tab's right edge to set its width without leaving stacked-tab mode.",
+  "author": "dylanchid",
+  "isDesktopOnly": true
+}
